@@ -79,6 +79,16 @@ signup uses the same event as login since they do the same job.
 
 - library used to interact with database: `prisma`
 
+# Additional libraries
+-  @prisma/client
+- cors
+- crypto
+- dotenv
+- jsonwebtoken
+- otplib
+- qrcode
+- socket.io
+
 ## Directory
 ```
 
