@@ -5,7 +5,7 @@ This is a project given as an assignment, its the backend part of the assignment
 This backend is mostly a bunch of quality apis.
 
 # Routers
-There are 2 types of routers, get and post. Here's a briefly representation on al the routers.
+There are 2 types of routers, get and post. Here's a briefly representation on all the routers.
 
 
 ## dashboard 
