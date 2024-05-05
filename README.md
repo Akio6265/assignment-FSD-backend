@@ -9,17 +9,17 @@ There are 2 types of routers, get and post. Here's a briefly representation on a
 
 
 ## dashboard 
+Get request
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | null | null |  |
-Get request
 - This api ` returns json ({ userLogs: logs, name:username }`  userLogs is an arry of the logs of the user, it extracts the userID from the data given by authentication (middleware we will discuss shortly)
 
 ## qrImage 
+Get request
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | null | null | |
-Get request
 - This api ` returns json ({data:{image}}` , a qr code image for user to authentication , it extracts the userID from the data given by authentication (middleware we will discuss shortly) 
 
 ## login 
