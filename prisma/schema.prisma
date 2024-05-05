@@ -22,7 +22,6 @@ model User {
   twoFactorAuth_secret String?
    twoFactorAuth_secret_temp String?
   admin Boolean?   @default(false)
-  email String?   @unique
   logs  Logs[]
 }
 model Logs {
