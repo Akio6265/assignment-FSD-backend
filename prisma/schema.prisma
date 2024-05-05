@@ -14,7 +14,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 model User {
-  userId String @unique @default(uuid())
+  userId String @unique @id @default(uuid())
   username String @unique @db.VarChar(10)
   password String @unique
   salt String
@@ -25,7 +25,7 @@ model User {
   logs  Logs[]
 }
 model Logs {
-  logId String @unique @default(uuid())
+  logId String @id @default(uuid())
   user      User     @relation(fields: [userId], references: [userId])
   userId    String 
   ipAddress String

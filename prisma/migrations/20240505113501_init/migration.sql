@@ -8,12 +8,11 @@ CREATE TABLE `User` (
     `twoFactorAuth_secret` VARCHAR(191) NULL,
     `twoFactorAuth_secret_temp` VARCHAR(191) NULL,
     `admin` BOOLEAN NULL DEFAULT false,
-    `email` VARCHAR(191) NULL,
 
     UNIQUE INDEX `User_userId_key`(`userId`),
     UNIQUE INDEX `User_username_key`(`username`),
     UNIQUE INDEX `User_password_key`(`password`),
-    UNIQUE INDEX `User_email_key`(`email`)
+    PRIMARY KEY (`userId`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
@@ -22,11 +21,11 @@ CREATE TABLE `Logs` (
     `userId` VARCHAR(191) NOT NULL,
     `ipAddress` VARCHAR(191) NOT NULL,
     `userAgent` VARCHAR(191) NOT NULL,
-    `active` BOOLEAN NOT NULL DEFAULT false,
+    `active` BOOLEAN NOT NULL DEFAULT true,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updateAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 
-    UNIQUE INDEX `Logs_logId_key`(`logId`)
+    PRIMARY KEY (`logId`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
