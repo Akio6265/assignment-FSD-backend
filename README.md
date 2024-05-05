@@ -2,10 +2,10 @@
 # Dashboard backend
 
 This is a project given as an assignment, its the backend part of the assignment made with framework "EXPRESS.js" using ts.
-This backend is mostly a bunch of quality apis.
+This backend is mostly a bunch of quality APIs.
 
 # Routers
-There are 2 types of routers, get and post. Here's a briefly representation on al the routers.
+There are 2 types of routers, get and post. Here's a Brief representation on all  the routers.
 
 
 ## dashboard 
@@ -13,7 +13,7 @@ Get request
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | null | null |  |
-- This api ` returns json ({ userLogs: logs, name:username }`  userLogs is an arry of the logs of the user, it extracts the userID from the data given by authentication (middleware we will discuss shortly)
+- This api ` returns json ({ userLogs: logs, name:username }`  userLogs is an array of the logs of the user, it extracts the userID from the data given by authentication (middleware we will discuss shortly)
 
 ## qrImage 
 Get request
@@ -56,9 +56,8 @@ Post request
 # middlewares
 
 This project contains three
-- middlewares
 - authentication
-- validationChceck
+- validationCheck
 - set_ip_agent
 
 # Utility
