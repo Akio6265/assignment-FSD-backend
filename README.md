@@ -9,49 +9,49 @@ There are 2 types of routers, get and post. Here's a briefly representation on a
 
 
 ## dashboard 
-Get request
-- This api ` returns json ({ userLogs: logs, name:username }`  userLogs is an arry of the logs of the user, it extracts the userID from the data given by authentication (middleware we will discuss shortly)
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | null | null |  |
+Get request
+- This api ` returns json ({ userLogs: logs, name:username }`  userLogs is an arry of the logs of the user, it extracts the userID from the data given by authentication (middleware we will discuss shortly)
 
 ## qrImage 
-Get request
-- This api ` returns json ({data:{image}}` , a qr code image for user to authentication , it extracts the userID from the data given by authentication (middleware we will discuss shortly) 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | null | null | |
+Get request
+- This api ` returns json ({data:{image}}` , a qr code image for user to authentication , it extracts the userID from the data given by authentication (middleware we will discuss shortly) 
 
 ## login 
 Post request
-- A typical login api for user to login, it `returns json { message: "Successfully login as ${user.username}", tokens }` this token is a jwt token which client must include while making request to any endpoint which requires authentication.
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `username` | `string` | **required** |
 | `password` | `string` | **required** |
 | `2FA_code` | `number` | **required** |
+- A typical login api for user to login, it `returns json { message: "Successfully login as ${user.username}", tokens }` this token is a jwt token which client must include while making request to any endpoint which requires authentication.
 
 ## signup 
 Post request
-- A typical signup api for user to signup, it ` returns json { message: "Account created successfully", tokens } ` this token is a jwt token which client must include while making request to any endpoint which requires authentication.
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `username` | `string` | **required** |
+- A typical signup api for user to signup, it ` returns json { message: "Account created successfully", tokens } ` this token is a jwt token which client must include while making request to any endpoint which requires authentication.
 
 ## tfa 
 Post request
-- This api is to verify the authentication code, it `returns {message:"Valid code"}` for valid code, `{message:"Invalid code"}` otherwise.
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `code` | `number` | **required** |
+- This api is to verify the authentication code, it `returns {message:"Valid code"}` for valid code, `{message:"Invalid code"}` otherwise.
 
 
 ## signout 
 Post request
-- This api is to signout from a give device, the "log" will contain the important data to signout from the desired device of a desired user.
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `log` | `string` | **required** |
+- This api is to signout from a give device, the "log" will contain the important data to signout from the desired device of a desired user.
 
 # middlewares
 
